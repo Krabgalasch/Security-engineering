@@ -43,7 +43,7 @@ Confirms that the server is making requests to user-supplied URLs, proving the S
 Endpoint: /store<br>
 debug:<br>
 127.0.0.1 - - [17/Nov/2024 17:30:29] "POST /fetch HTTP/1.1" 500 -<br>
-Vulnerability of Unsafe Consumption of APIs are evident, as no checks are in place for the external URL or its content2
+Vulnerability of Unsafe Consumption of APIs are evident, as no checks are in place for the external URL or its content
 
 4. Unsafe Consumption of APIs<br>
 Endpoint: /fetch<br>
