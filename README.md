@@ -23,28 +23,28 @@ This API demonstrates intentional vulnerabilities based on the OWASP API's:
 Start the API server:
 python app.py
 
-In a new terminal navigate to script\vdemo.py ->
-run: python vdemo.py
+In a new terminal navigate to script\vdemo.py -><br>
+run: python vdemo.py<br>
 
-1. Unrestricted Resource Consumption
-Endpoint: /store
-debug:
-"127.0.0.1 - - [17/Nov/2024 17:30:25] "POST /ssrf HTTP/1.1" 500 -"
-
-
-3. Server-Side Request Forgery (SSRF)
-Endpoint: /ssrf
-
-127.0.0.1 - - [17/Nov/2024 17:30:25] "POST /ssrf HTTP/1.1" 500 -
-
-3. Security Misconfiguration
-Endpoint: /store
-debug:
-127.0.0.1 - - [17/Nov/2024 17:30:29] "POST /fetch HTTP/1.1" 500 -
+1. Unrestricted Resource Consumption<br>
+Endpoint: /store<br>
+debug:<br>
+"127.0.0.1 - - [17/Nov/2024 17:30:25] "POST /ssrf HTTP/1.1" 500 -"<br>
 
 
-4. Unsafe Consumption of APIs
-Endpoint: /fetch
-debug:
-This is an example of Security Misconfiguration, as debug mode exposes sensitive server information such as:
+3. Server-Side Request Forgery (SSRF)<br>
+Endpoint: /ssrf<br>
+debug:<br>
+127.0.0.1 - - [17/Nov/2024 17:30:25] "POST /ssrf HTTP/1.1" 500 -<br>
+
+3. Security Misconfiguration<br>
+Endpoint: /store<br>
+debug:<br>
+127.0.0.1 - - [17/Nov/2024 17:30:29] "POST /fetch HTTP/1.1" 500 -<br>
+
+
+4. Unsafe Consumption of APIs<br>
+Endpoint: /fetch<br>
+debug:<br>
+This is an example of Security Misconfiguration, as debug mode exposes sensitive server information such as:<br>
 File paths (e.g., D:\Anaconda\Lib\site-packages\requests)
