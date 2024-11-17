@@ -28,16 +28,23 @@ run: python vdemo.py
 
 1. Unrestricted Resource Consumption
 Endpoint: /store
+debug:
+"127.0.0.1 - - [17/Nov/2024 17:30:25] "POST /ssrf HTTP/1.1" 500 -"
 
 
-2. Server-Side Request Forgery (SSRF)
+3. Server-Side Request Forgery (SSRF)
 Endpoint: /ssrf
 
+127.0.0.1 - - [17/Nov/2024 17:30:25] "POST /ssrf HTTP/1.1" 500 -
 
 3. Security Misconfiguration
 Endpoint: /store
+debug:
+127.0.0.1 - - [17/Nov/2024 17:30:29] "POST /fetch HTTP/1.1" 500 -
 
 
 4. Unsafe Consumption of APIs
 Endpoint: /fetch
-
+debug:
+This is an example of Security Misconfiguration, as debug mode exposes sensitive server information such as:
+File paths (e.g., D:\Anaconda\Lib\site-packages\requests)
