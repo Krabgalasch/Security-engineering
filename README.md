@@ -28,16 +28,16 @@ run: python vdemo.py
 
 1. Unrestricted Resource Consumption
 Endpoint: /store
-Sends large payloads repeatedly without validation or limits.
+
 
 2. Server-Side Request Forgery (SSRF)
 Endpoint: /ssrf
-Exploits the API by making requests to attacker-supplied URLs.
+
 
 3. Security Misconfiguration
 Endpoint: /store
-Triggers debug mode stack traces using invalid payloads.
+
 
 4. Unsafe Consumption of APIs
 Endpoint: /fetch
-Provides a URL to the API, which fetches data without validation.
+
