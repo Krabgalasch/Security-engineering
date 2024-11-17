@@ -30,20 +30,20 @@ run: python vdemo.py<br>
 Endpoint: /store<br>
 debug:<br>
 "127.0.0.1 - - [17/Nov/2024 17:30:25] "POST /ssrf HTTP/1.1" 500 -"<br>
-This shows the vulnerability of Unrestricted Resource Consumption, as data is being stored without any checks or limits.
+Shows the vulnerability of Unrestricted Resource Consumption, as data is being stored without any checks or limits.
 
 2. Server-Side Request Forgery (SSRF)<br>
 Endpoint: /ssrf<br>
 debug:<br>
 127.0.0.1 - - [17/Nov/2024 17:30:25] "POST /ssrf HTTP/1.1" 500 -<br>
-This confirms that the server is making requests to user-supplied URLs, proving the SSRF vulnerability exists.
+Confirms that the server is making requests to user-supplied URLs, proving the SSRF vulnerability exists.
 
 
 3. Security Misconfiguration<br>
 Endpoint: /store<br>
 debug:<br>
 127.0.0.1 - - [17/Nov/2024 17:30:29] "POST /fetch HTTP/1.1" 500 -<br>
-The vulnerability of Unsafe Consumption of APIs is evident, as no checks are in place for the external URL or its content2
+Vulnerability of Unsafe Consumption of APIs are evident, as no checks are in place for the external URL or its content2
 
 4. Unsafe Consumption of APIs<br>
 Endpoint: /fetch<br>
